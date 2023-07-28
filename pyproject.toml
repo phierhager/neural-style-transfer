@@ -1,20 +1,19 @@
 [tool.poetry]
-name = "deep-learning"
+name = "neural-style-transfer"
 version = "0.1.0"
 description = ""
 authors = ["Philip Hierhager <philip.hierhager@googlemail.com>"]
 readme = "README.md"
-packages = [{include = "deep_learning"}]
+packages = [{include = "neural_style_transfer"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-numpy = "^1.24.2"
-matplotlib = "^3.7.1"
-h5py = "^3.8.0"
+python = ">=3.9, <3.11"
+pillow = "^10.0.0"
+tensorflow-io-gcs-filesystem = "0.31.0"
+tensorflow = "^2.13.0"
 
 [tool.poetry.scripts]
-run_two = "deep_learning.main:run_two_layer_model"
-run_four = "deep_learning.main:run_four_layer_model"
+train = "neural_style_transfer.train:train"
 
 [build-system]
 requires = ["poetry-core"]
