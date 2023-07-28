@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "deep-learning"
+version = "0.1.0"
+description = ""
+authors = ["Philip Hierhager <philip.hierhager@googlemail.com>"]
+readme = "README.md"
+packages = [{include = "deep_learning"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.24.2"
+matplotlib = "^3.7.1"
+h5py = "^3.8.0"
+
+[tool.poetry.scripts]
+run_two = "deep_learning.main:run_two_layer_model"
+run_four = "deep_learning.main:run_four_layer_model"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
